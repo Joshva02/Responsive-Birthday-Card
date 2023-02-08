@@ -1,22 +1,23 @@
-
 * {
   transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
 }
 
 body {
-  background: #008888;
+  background-image: url("bg.jpg");
   display: grid;
   place-items: center;
   height: 100vh;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  font-size: small;
+  padding: 8px;
 }
 
 .card {
-  background: #fdfdfd;
+  background: #F1C3FC;
   border-radius: 4px;
-  height: 85vh;
-  width: 80vw;
+
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   text-align: center;
   display: flex;
@@ -27,18 +28,7 @@ body {
   overflow: hidden;
 }
 
-@media only screen and (min-width: 1000px) {
-  .card {
-    flex-direction: row-reverse;
-  }
-  .card img.birthday {
-    width: 100%;
-    max-width: 50vw;
-    max-height: unset;
-  }
-}
-
-@media only screen and (max-height: 640px) {
+@media (min-width: 1000px), (max-height: 640px) {
   .card {
     flex-direction: row-reverse;
   }
@@ -50,11 +40,13 @@ body {
 }
 
 img.birthday {
-  max-height: 40vh;
+  max-height: 30vh;
 }
 
 .text {
   padding: 1em;
+  text-align: center;
+  margin: 20px;
 }
 
 .muted {
@@ -63,4 +55,59 @@ img.birthday {
 
 .space {
   height: 100px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  object-fit: contain;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@media (max-width: 767px) {
+  .card {
+    width: 95vw;
+  }
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }

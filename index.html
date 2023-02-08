@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./index.css">
@@ -10,13 +11,134 @@
 </head>
 <body>
   <div class="card">
-    <img src="./birthday.svg" alt="birthday" class="birthday">
     <div class="text">
-      <h1>Happy Birthday!</h1>
-      <p>I hope you have a wonderful birthday</p>
-      <p class="muted">- Jonah Lawrence</p>
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="caelyn.jpg" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn2.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn3.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn4.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn5.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn6.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn7.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn8.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn9.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn10.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn11.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn12.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn13.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn14.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn15.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn16.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="caelyn17.JPG" style="width:40vh; height: 20%;">
+        </div>
+      
+
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+        <span class="dot" onclick="currentSlide(11)"></span>
+        <span class="dot" onclick="currentSlide(12)"></span>
+        <span class="dot" onclick="currentSlide(13)"></span>
+        <span class="dot" onclick="currentSlide(14)"></span>
+        <span class="dot" onclick="currentSlide(15)"></span>
+        <span class="dot" onclick="currentSlide(16)"></span>
+        <span class="dot" onclick="currentSlide(17)"></span>
+      </div>
+      <h1>Happy 16th Birthday Caelyn!</h1>
+      <p>Congrats on making it to 16! You're growing up, which means you can get your ID card. This means you can now click on movies rated TV-16, which is actually so cool. Considering I'm an immigrant and have no ID, I can only watch things for kids 13 and under. Don't tell Aeryn or Aedyn, but to me, you're the coolest of all your sisters and the best xiao I've ever played with. Hope you have a great birthday and I hope you save me a slice of cake! </p>
+      <h3 class="muted">From Your Sisters Very Cool Boyfriend Josh</h3>
+      <audio controls autoplay>
+        <source src="song2.mp3" type="audio/ogg">
+        <source src="song2.mp3" type="audio/mpeg">
+      </audio>
     </div>
-    <div class="space"></div>
+    
+   
   </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+    </script>
+    
 </body>
 </html>
